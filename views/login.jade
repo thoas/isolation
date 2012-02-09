@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Login
+  p
+    | Try accessing 
+    a(href="/restricted") /restricted
+
+  #form
+    form(method="post")
+      !=authentication_form.toHTML()
+      input(type="submit")
