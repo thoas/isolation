@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 User list
+
+  - if (users.length)
+    ul
+      - users.forEach(function(user) {
+        li
+          =user.username
+          | 
+          a(href='/user/delete/' + user.id) x
+      - })

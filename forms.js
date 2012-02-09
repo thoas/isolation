@@ -3,6 +3,8 @@ var forms = require('forms')
   , validators = forms.validators;
 
 exports.registration = forms.create({
+    first_name: fields.string({required: false}),
+    last_name: fields.string({required: false}),
     username: fields.string({required: true}),
     password: fields.password({required: true}),
     confirm:  fields.password({

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Registration
+  p
+    | Already have an account? 
+    | Try
+    a(href="/login") login
+    | !
+
+  #registration-form
+    form(method="post")
+      !=registration_form.toHTML()
+      input(type="submit")
